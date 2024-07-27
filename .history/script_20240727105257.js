@@ -1,6 +1,4 @@
 choices = ["rock", "paper", "scissors"]
-humanScore = 0
-compScore = 0
 
 function getComputerChoice() {
     return choices[Math.floor(Math.random() * choices.length)];
@@ -49,7 +47,11 @@ function playGame() {
     if (compScore > humanScore) { 
         console.log(`Game over! Computer wins with a score of ${compScore}`);
     } else { 
-        console.log(`Congrats! You won with a score of ${humanScore}`);
+        console.log(`Congrats! You won with a score of ${humanScore}`)
     }
 }
- playGame();
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);

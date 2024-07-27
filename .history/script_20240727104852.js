@@ -1,6 +1,4 @@
 choices = ["rock", "paper", "scissors"]
-humanScore = 0
-compScore = 0
 
 function getComputerChoice() {
     return choices[Math.floor(Math.random() * choices.length)];
@@ -42,14 +40,11 @@ function playRound(humanChoice, compChoice) {
 }
 
 function playGame() { 
-    for (let i = 0; i < 5; i++) {
-        playRound(getHumanChoice(), getComputerChoice())
-    }
-
-    if (compScore > humanScore) { 
-        console.log(`Game over! Computer wins with a score of ${compScore}`);
-    } else { 
-        console.log(`Congrats! You won with a score of ${humanScore}`);
-    }
+    let humanScore = 0
+    let compScore = 0
 }
- playGame();
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);

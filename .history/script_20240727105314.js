@@ -1,6 +1,4 @@
 choices = ["rock", "paper", "scissors"]
-humanScore = 0
-compScore = 0
 
 function getComputerChoice() {
     return choices[Math.floor(Math.random() * choices.length)];
